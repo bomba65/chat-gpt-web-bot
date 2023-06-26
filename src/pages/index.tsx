@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from "next/image"
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -28,7 +28,10 @@ export default function Home() {
               width={100}
               height={24}
               priority
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </a>
         </div>
       </div>
@@ -41,7 +44,10 @@ export default function Home() {
           width={180}
           height={37}
           priority
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
@@ -114,5 +120,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
